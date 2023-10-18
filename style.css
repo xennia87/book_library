@@ -1,0 +1,181 @@
+* {
+    font-family: 'Roboto';
+}
+
+.page_header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    /* justify-content: center; */
+}
+
+.brand {
+    display: flex;
+    flex-direction: row;
+}
+
+.logo {
+    color: white;
+    margin-right: 10px;
+}
+
+.page_footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.page_header,
+.page_footer {
+    background-color: #1e1b4b;
+    height: 50px;
+    color: white;
+    padding: 5px 30px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    background-color: darkgray;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background-image: url(banner.png);
+}
+.hero_title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.new_book_button,
+.toggle-read-button,
+#submitButton,
+#closeModalBtn {
+    width: 150px;
+    background-color: #3730a3;
+    color: white;
+    border: 0px;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin: 10px;
+}
+
+.cards_container {
+    padding: 30px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3 , minmax(220px, 25%));
+    gap: 15px;
+} 
+
+.card_content {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: repeat(4, 1fr);
+    background-color: #e0e7ff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Aplica sombra solo a la izquierda */
+}
+
+.card_content {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: repeat(4, 1fr);
+    background-color: #e0e7ff;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.toggle-read-button {
+    grid-column: span 2;
+} 
+
+#bookModal {
+    border: 0px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+input[type="text"],
+input[type="number"] {
+    appearance: none;
+    border-radius: 6px;
+    border: 1px solid #c7d2fe;
+    padding: 10px 5px;
+
+}   
+
+/* .form_title {
+    grid-column: span 2;
+}
+
+#bookForm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+} */
+
+#bookForm {
+    display: inline-grid;
+    grid-template: repeat(5, 1fr) / 1fr 1fr;
+    align-items: center;
+    justify-items: start;
+    grid-template-areas: 
+    "label1 input1"
+    "label2 input2"
+    "label3 input3"
+    "label4 input4"
+    "send close"
+}
+
+label[for="bookName"] {
+    grid-area: label1;
+}
+
+label[for="bookAuthor"] {
+    grid-area: label2;
+}
+
+label[for="bookPages"] {
+    grid-area: label3;
+}
+
+label[for="bookRead"] {
+    grid-area: label4;
+}
+
+input[name="bookName"] {
+    grid-area: input1;
+}
+input[name="bookAuthor"] {
+    grid-area: input2;
+}
+input[name="bookPages"] {
+    grid-area: input3;
+}
+input[name="read"] {
+    grid-area: input4;
+}
+
+#submitButton {
+    grid-area: send;
+}
+
+#closeModalBtn {
+    grid-area: close;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="page_header">
+        <div class="brand">
+            <div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book-fill" viewBox="0 0 16 16">
+                <path d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+              </svg></div>
+            <div class="brand_name">My book Library</div>
+        </div>
+    </header>
+
+    <!-- Container -->
+
+    <main class="container" id="container" >
+        <div class="hero">
+            <div class="hero_title">My book library</div>
+            <div class="hero_subtitule">Books that I own</div>
+            <button class="new_book_button" id="showModalBtn">Register new book</button>
+        </div>
+    </main>
+
+    <div class="cards_container" id="cards_container">
+        <div class="card">
+            <div class="card_content">
+                <div class="label book_title_label">Title: </div>
+                <div class="book_title">Tokio Blues</div>
+                <div class="label book_author_label">Author: </div>
+                <div class="book_author">Haruki Murakami</div>
+                <div class="label book_pages_label">Pages: </div>
+                <div class="book_pages">350</div>
+                <!-- <label for="bookRead">Read?</label>
+                <input type="checkbox" id="bookRead" name="read"> -->
+                <div class="label book_read_label">Read? </div>
+                <div class="book_read">Yes</div>
+                <button class="toggle-read-button">Change status</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- A modal dialog containing a form -->
+
+<dialog id="bookModal">
+    <h2 class="form_title">Add book</h2>
+    <form id="bookForm">
+        <label for="bookName">Nombre del Libro:</label>
+        <input type="text" id="bookName" name="bookName" required><br>
+        <label for="bookAuthor">Autor del Libro:</label>
+        <input type="text" id="bookAuthor" name="bookAuthor" required><br>
+
+        <label for="bookPages">Número de Páginas:</label>
+        <input type="number" id="bookPages" name="bookPages" required><br>
+        <label for="bookRead">Leído:</label>
+        <input type="checkbox" id="bookRead" name="read" value="Yes">
+        <br>    
+        <button type="submit" id="submitButton" >Enviar</button>
+        <button type="button" id="closeModalBtn">Cerrar</button>
+    </form>
+</dialog>
+
+    <footer class="page_footer">
+        <div class="brand">
+            <div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book-fill" viewBox="0 0 16 16">
+                <path d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+              </svg></div>
+            <div class="brand_name">My book Library</div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
+
